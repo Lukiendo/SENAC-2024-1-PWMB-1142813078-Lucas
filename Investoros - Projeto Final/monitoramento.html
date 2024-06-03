@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVESTOROS - Monitoramento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/logo-transformed.webp" alt="Logo da Investoros">
+
+        <ul>
+            <li><a href="prot.html"><button class="button-84"  role="button" id="navHome">Início</button></a></li>
+            <li><a href="relatorios.html"><button class="button-84"  role="button" id="navReports">Relatórios</button></a></li>
+            <li><a href="clientes.html"><button class="button-84"  role="button" id="navClients">Clientes</button></a></li>
+            <li><a href="contato.html"><button class="button-84"  role="button" id="navContact">Contato</button></a></li>
+            <li><a href="monitoramento.html"><button class="button-84"  role="button" id="navMonitoring">Monitorar</button></a></li>
+            
+           
+            <li><a href="login.html"><button class="button-84"  role="button" id="navLogin">Entrar</button><li></li>
+
+        </ul>
+
+        <div class="dropdown">
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#" onclick="changeLanguage('pt-BR')">PT |</a>
+              <a class="dropdown-item" href="#"onclick="changeLanguage('en-US')">EN |</a>
+              <a class="dropdown-item" href="#"onclick="changeLanguage('es-ES')">ES</a>
+            </div>
+          </div>
+    </header>
+    <h1>Monitoramento</h1>
+
+    <div class="contai">
+        <main>
+
+
+            <div>
+                <h2>Adicionar Ativo</h2>
+                <form id="add-asset-form">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" required>
+                    <br>
+                    <label for="quantity">Quantidade:</label>
+                    <input type="number" id="quantity" required>
+                    <br>
+                    <label for="purchase-price">Preço de Compra:</label>
+                    <input type="number" id="purchase-price" step="0.01" required>
+                    <br>
+                    <label for="current-price">Preço Atual:</label>
+                    <input type="number" id="current-price" step="0.01" required>
+                    <br>
+                    <button type="submit">Adicionar</button>
+                    <br>
+                    <br>
+                    
+                </form>
+            </div>
+            <br>
+            <br>
+            <div>
+                
+                <h2>Carteira</h2>
+                <ul id="portfolio-list"></ul>
+                <div id="portfolio-performance"></div>
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <ul id="portfolio-list"></ul>
+    <div id="portfolio-performance"></div>
+</div>
+</main>
+</div>
+
+<h2>Fundos de Investimento Cadastrados</h2>
+<button type="button" class="btn" onclick="mostrarResultados()">Mostrar resultados</button>
+<table id="fundsTable">
+    <thead>
+        <tr>
+            <th>Nome do Fundo</th>
+            <th>Estratégia</th>
+            <th>Taxa de Administração</th>
+            <th>Perfil de Risco</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+
+
+
+    <footer>
+        <div class="aes">
+            <button id="aesButton">
+                <span id="aesText" style="color:rgb(255, 255, 255)">Confira:</span>
+            </button>
+    
+            <p id="footerText">Contato: contato@investoros.com | Telefone: (11) 32423-8564</p>
+    
+                <div class="social">
+                    <img src="./assets/whats.png" alt="">
+                    <img src="./assets/you.png" alt="">
+                    <img src="./assets/face.png" alt="">
+                  </div>
+                  
+    
+                   
+                
+            </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

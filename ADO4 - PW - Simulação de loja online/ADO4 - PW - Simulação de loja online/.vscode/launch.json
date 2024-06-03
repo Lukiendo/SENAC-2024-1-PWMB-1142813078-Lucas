@@ -1,0 +1,11 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Open login.html",
+            "file": "c:\\Users\\lucas\\OneDrive\\Documentos\\Guardar\\ADO4 - PW - Site da Loja de eletrônicos\\login.html"
+        }
+    ]
+}

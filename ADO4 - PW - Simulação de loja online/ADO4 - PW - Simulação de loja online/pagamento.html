@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="modelPagamento.css">
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+            <img src="logo da loja.png" alt="Logo da Loja">
+            <h1>Pagamento</h1>
+            <button onclick="window.location.href='carrinho.html'" style="padding: 10px 20px; margin-right: 10px; border: none; border-radius: 5px; cursor: pointer; background-color: #007bff; color: #fff; transition: background-color 0.3s ease;">Voltar</button>
+            <p id="total-amount">Total: R$ 0.00</p>
+            <div>
+                <button id="pix-btn" class="payment-btn">Pix</button>
+                <button id="boleto-btn" class="payment-btn">Boleto Bancário</button>
+            </div>
+            <form id="payment-form" style="display: none;">
+                <div id="pix-info" style="display: none;">
+                    <p>Escaneie o QR Code abaixo com seu aplicativo de banco para pagar via Pix:</p>
+                    <img id="pix-qr-code" src="" alt="QR Code Pix" style="width: 200px;">
+                </div>
+                <div id="boleto-info" style="display: none;">
+                    <label for="boleto-value">Valor do Boleto:</label>
+                    <input type="text" id="boleto-value" name="boleto-value" required>
+                    <label for="boleto-due-date">Data de Vencimento:</label>
+                    <input type="text" id="boleto-due-date" name="boleto-due-date" value="30/12/2024" readonly required>
+                    <label for="boleto-code">Código do Boleto:</label>
+                    <span id="boleto-code" name="boleto-code" readonly></span>
+                </div>
+                <button id="confirm-payment-btn" type="submit">Finalizar</button>
+            </form>
+            <div id="feedback-message" class="feedback-message"></div>
+        </div>
+    </div>
+    <script src="scriptPagamento.js" defer></script>
+</body>
+</html>
